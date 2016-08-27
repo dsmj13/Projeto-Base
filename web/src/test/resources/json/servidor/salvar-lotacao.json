@@ -1,0 +1,64 @@
+	{
+		"numeroSiape":"10101515",
+		"dataEfetivoExercicio":"2015-08-15",
+		"situacaoFuncional":
+		{
+			"id":14,
+			"descricao":"REQ.DE OUTROS ORGAOS",
+			"ativo":"S"
+		},
+		"numeroPortariaNomeacao":"5",
+		"dataPortariaNomeacao":"2015-08-01",
+		"dataDou":"2015-08-15",
+		"unidadeOrg":
+		{
+			"id":121,
+			"nome":"ESTA��O ADUANEIRA INTERIOR DE COL�MBIA",
+			"sigla":"EADI-Col�mbia-SP"
+		},
+		"dataInicio":"2015-08-01",
+		"padrao":
+		{
+			"id":2,
+			"classe":
+			{
+				"id":1,
+				"descricao":"A",
+				"status":"S"
+			},
+			"nome":"AI",
+			"status":"S"
+		},
+		"quadro":
+		{
+			"id":1,
+			"nome":"Efetivo",
+			"ativo":"S"
+		},
+		"cargo":
+			{
+				"id":1,
+				"nome":"ANALISTA ADMINISTRATIVO",
+				"ativo":"S"
+			},
+			"nivelCargo":
+			{
+				"id":1,
+				"nomeNivelCargo":"teste",
+				"ativo":"S"
+			},
+		"desligado":"S",
+		"motivoDesligamento":
+		{
+			"id":1,
+			"descricaoMotivoDesligamento":"teste",
+			"ativo":"S"
+		},
+		"dataDesligamento":"2015-08-10",
+		"descricaoObservacaoSemVinculo":null,
+		"descricaoSituacaoFuncionalOutros":null,
+		
+		"erro":{"numeroSiape":false,"dataEfetivoExercicio":false,"situacaoFuncional":false,"unidadeOrg":false,"quadro":false,"cargo":false,"nivelCargo":false,"desligado":false,"motivoDesligamento":false,"dataDesligamento":false},
+		
+		"idServidor":"11"
+	}

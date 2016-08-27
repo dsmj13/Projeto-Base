@@ -1,0 +1,30 @@
+[
+    {
+        "id": 22,
+        "dataBoletim": "2015-08-22",
+        "dataPortaria": "2015-08-15",
+        "avaliacao": 1,
+        "boletim": 22,
+        "notaAvalicacao": 95,
+        "portaria": 1,
+        "idServidor": "AAAABBB"
+    },
+    {
+        "id": 23,
+        "dataBoletim": "2015-08-09",
+        "dataPortaria": "2015-08-23",
+        "avaliacao": 2,
+        "boletim": 3,
+        "notaAvalicacao": 98,
+        "portaria": 2
+    },
+    {
+        "id": 24,
+        "dataBoletim": "2015-08-11",
+        "dataPortaria": "2015-07-28",
+        "avaliacao": 3,
+        "boletim": 22,
+        "notaAvalicacao": 80,
+        "portaria": 22
+    }
+]

@@ -1,0 +1,20 @@
+	{
+		"idServidor":"AAAABBB",
+		"afastamentoEntidade":
+		{
+			"id":1,"descricao":"Lic. Motiv. Doen. Pes. Fam. Após 60 dias S/Remuneração - EST",
+			"codigo":"0089",
+			"ativo":"S",
+			"erro":{
+			"descricao":false,
+			"codigo":false
+		}
+	},
+		"dataInicio":"2015-11-01",
+		"dataFim":"2015-11-10",
+		"erro":
+		{
+			"dataInicio":false,
+			"dataFim":false
+		}
+	}

@@ -1,0 +1,10 @@
+{
+    "descricao": "teste",
+    "ano": "3333",
+    "publicacoes": [],
+    "erro": {
+        "descricao": false,
+        "ano": false
+    },
+    "idServidor":"AAAABBB"
+}

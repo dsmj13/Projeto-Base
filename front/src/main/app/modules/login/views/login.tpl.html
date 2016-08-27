@@ -1,0 +1,28 @@
+<div class="container usuarioLogado" ui-view >
+	<div class="row">
+		<div class="{{usuarioAutenticado ? 'col-md-12' : 'col-md-4 col-md-offset-4'}}">
+			<div id="BoxAreaLogin">
+				<div class="BoxAreaLogin_titulo">
+					<h2>Digite seu Login e sua senha para acessar a área restrita:</h2>
+				</div>
+				<div class="BoxAreaLogin_content logar">
+					<form name="dwltiLoginForm" novalidate ng-submit="login()">
+						<ul>
+							<li class="login"><label class="BoxAreaLogin_email_senha obrigatorio" for="email">Login:</label> <col-md- class="iconelogin dwlti-icone-usuario" style="top:28px"></col-md-> <input name="email" id="email" class="form-control" type="text" validator="[required]" ng-model="formLogin.email"
+								maxlength="30" /></li>
+							<li class="senha"><label class="BoxAreaLogin_email_senha obrigatorio" for="senha">Senha:</label> <col-md- class="iconelogin dwlti-icone-fechado" style="top:28px"></col-md-> <input type="password" class="form-control" name="senha" id="senha" validator="[required]"
+								ng-model="formLogin.password" maxlength="60" /></li>
+							<li>
+								<div id="BoxAreaLogin_EsqueceuEmail_e_Botao">
+									<div id="BoxAreaLogin_EsqueceuEmail"></div>
+									<button type="submit" class="btn btn-primary pull-right">ENTRAR</button>
+									<button type="button" class="btn btn-primary pull-right" ui-sref="home">HOME</button>
+								</div>
+							</li>
+						</ul>
+					</form>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

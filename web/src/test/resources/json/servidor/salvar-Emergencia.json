@@ -1,0 +1,44 @@
+
+{
+    "contatos": [
+        {
+            "id": 1050,
+            "nomePessoa": "Pedro",
+            "telefonePrincipal": "22222222222",
+            "grauParentesco": 1,
+            "_oldHash": "0DJ",
+            "erro": null
+        }
+    ],
+    "redeCredenciada": [],
+    "hospitais": [
+        {
+            "id": 1,
+            "descricao": "322"
+        }
+    ],
+    "deficiencias": [
+        {
+            "id": 1
+        }
+    ],
+    "planoSaude": null,
+    "descricaoDeficiencia": null,
+    "descricaoPlanoSaude": null,
+    "hospitalCredenciado": null,
+    "ingressoVagaDeficiente": null,
+    "tecnologiaAssistiva": "S",
+    "tecnologias": [
+        {
+            "descricao": "teste"
+        }
+    ],
+    "tecnologia": null,
+    "deficiencia": null,
+    "rede": {
+        "hospitalCredenciado": ""
+    },
+    "alergia": "S",
+    "descricaoAlergia": "teste",
+    "idServidor": "AAAABBB"
+}

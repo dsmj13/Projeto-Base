@@ -1,0 +1,12 @@
+{
+	"titulo-selecionar-perfil" : "Selecionar Perfil",
+	"th-nome-perfil" : "Nome Perfil",
+	"th-sigla-perfil" : "Sigla Perfil",
+	"th-acao-perfil" : "Ação",
+	
+	"M002" : "Este campo é obrigatório",
+	
+	"label.nenhum" :"Nenhum",
+	
+	"campo-obrigatorio": "Este campo é obrigatório"
+}

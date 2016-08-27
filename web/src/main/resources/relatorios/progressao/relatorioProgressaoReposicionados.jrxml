@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="relatorioProgressaoReposicionados" pageWidth="802" pageHeight="555" orientation="Landscape" whenNoDataType="NoDataSection" columnWidth="802" leftMargin="0" rightMargin="0" topMargin="0" bottomMargin="0" uuid="7ba2605e-7cf6-46d3-8eb8-f82f744285b5">
+	<property name="ireport.zoom" value="1.3310000000000004"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<style name="classePadraoBIeEI">
+		<conditionalStyle>
+			<conditionExpression><![CDATA[$F{classe}.equals("BI")]]></conditionExpression>
+			<style mode="Opaque" forecolor="#FF0000"/>
+		</conditionalStyle>
+		<conditionalStyle>
+			<conditionExpression><![CDATA[$F{classe}.equals("EI")]]></conditionExpression>
+			<style mode="Opaque" forecolor="#FF0000"/>
+		</conditionalStyle>
+	</style>
+	<parameter name="dto" class="br.gov.anvisa.sgc.dtos.RelatorioProgressaoDTO"/>
+	<field name="classe" class="java.lang.String"/>
+	<field name="nome" class="java.lang.String"/>
+	<field name="matricula" class="java.lang.String"/>
+	<field name="dataProgressao" class="java.util.Date"/>
+	<field name="lotacao" class="java.lang.String"/>
+	<columnHeader>
+		<band height="24">
+			<staticText>
+				<reportElement mode="Opaque" x="415" y="0" width="187" height="24" backcolor="#CCCCCC" uuid="2b78daa2-d66b-4e6a-94bf-e296f08b121b"/>
+				<box topPadding="1" leftPadding="1" bottomPadding="1" rightPadding="1">
+					<pen lineWidth="1.0" lineColor="#FFFFFF"/>
+					<topPen lineWidth="1.0" lineColor="#FFFFFF"/>
+					<leftPen lineWidth="1.0" lineColor="#FFFFFF"/>
+					<bottomPen lineWidth="1.0" lineColor="#FFFFFF"/>
+					<rightPen lineWidth="1.0" lineColor="#FFFFFF"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<text><![CDATA[Lotação]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="257" y="0" width="158" height="24" backcolor="#CCCCCC" uuid="0c29127c-8b3c-4970-89ca-43f284b1cea5"/>
+				<box topPadding="1" leftPadding="1" bottomPadding="1" rightPadding="1">
+					<pen lineWidth="1.0" lineColor="#FFFFFF"/>
+					<topPen lineWidth="1.0" lineColor="#FFFFFF"/>
+					<leftPen lineWidth="1.0" lineColor="#FFFFFF"/>
+					<bottomPen lineWidth="1.0" lineColor="#FFFFFF"/>
+					<rightPen lineWidth="1.0" lineColor="#FFFFFF"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<text><![CDATA[Matrícula]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="602" y="0" width="100" height="24" backcolor="#CCCCCC" uuid="a5f96c1d-5d2b-408d-9fe0-e99a4a6070ce"/>
+				<box topPadding="1" leftPadding="1" bottomPadding="1" rightPadding="1">
+					<pen lineWidth="1.0" lineColor="#FFFFFF"/>
+					<topPen lineWidth="1.0" lineColor="#FFFFFF"/>
+					<leftPen lineWidth="1.0" lineColor="#FFFFFF"/>
+					<bottomPen lineWidth="1.0" lineColor="#FFFFFF"/>
+					<rightPen lineWidth="1.0" lineColor="#FFFFFF"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<text><![CDATA[Classe/Padrão]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="702" y="0" width="100" height="24" backcolor="#CCCCCC" uuid="bacd3fd0-cdc7-48c7-a00c-ae9727626fb0"/>
+				<box topPadding="1" leftPadding="1" bottomPadding="1" rightPadding="1">
+					<pen lineWidth="1.0" lineColor="#FFFFFF"/>
+					<topPen lineWidth="1.0" lineColor="#FFFFFF"/>
+					<leftPen lineWidth="1.0" lineColor="#FFFFFF"/>
+					<bottomPen lineWidth="1.0" lineColor="#FFFFFF"/>
+					<rightPen lineWidth="1.0" lineColor="#FFFFFF"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<text><![CDATA[Data Progressão]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="0" y="0" width="257" height="24" backcolor="#CCCCCC" uuid="3f958cdf-cc82-45ac-ad6d-d3495aaf8516"/>
+				<box topPadding="1" leftPadding="1" bottomPadding="1" rightPadding="1">
+					<pen lineWidth="1.0" lineColor="#FFFFFF"/>
+					<topPen lineWidth="1.0" lineColor="#FFFFFF"/>
+					<leftPen lineWidth="1.0" lineColor="#FFFFFF"/>
+					<bottomPen lineWidth="1.0" lineColor="#FFFFFF"/>
+					<rightPen lineWidth="1.0" lineColor="#FFFFFF"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<text><![CDATA[Nome]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="20" splitType="Stretch">
+			<textField>
+				<reportElement style="classePadraoBIeEI" x="602" y="0" width="100" height="20" uuid="7c37d679-a464-4344-b798-8842a8214bfa"/>
+				<textElement textAlignment="Center" verticalAlignment="Top"/>
+				<textFieldExpression><![CDATA[$F{classe}]]></textFieldExpression>
+			</textField>
+			<textField pattern="dd/MM/yyyy">
+				<reportElement style="classePadraoBIeEI" x="702" y="0" width="100" height="20" uuid="11267f8e-6434-476e-a2b3-082b262bcc77"/>
+				<textElement textAlignment="Center" verticalAlignment="Top"/>
+				<textFieldExpression><![CDATA[$F{dataProgressao}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="classePadraoBIeEI" x="257" y="0" width="158" height="20" uuid="a38fc928-bbe0-46a5-8164-ac573c4a89e3"/>
+				<textElement textAlignment="Center" verticalAlignment="Top"/>
+				<textFieldExpression><![CDATA[$F{matricula}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="classePadraoBIeEI" x="415" y="0" width="187" height="20" uuid="7896ce3f-c0e9-4bec-9dc1-dadb73c3987f"/>
+				<textElement textAlignment="Center" verticalAlignment="Top"/>
+				<textFieldExpression><![CDATA[$F{lotacao}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="classePadraoBIeEI" mode="Opaque" x="0" y="0" width="257" height="20" uuid="a6710ad4-7a84-46dc-ad83-19c8edde6e7e"/>
+				<textElement textAlignment="Center" verticalAlignment="Top"/>
+				<textFieldExpression><![CDATA[$F{nome}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<lastPageFooter>
+		<band height="108">
+			<frame>
+				<reportElement positionType="Float" x="620" y="16" width="182" height="92" uuid="635c4fcc-df2a-4f46-89e5-e3a44f042de6"/>
+				<rectangle>
+					<reportElement x="0" y="0" width="181" height="91" uuid="9c300b41-f913-4f5c-8ee0-4102ab2f60d8"/>
+				</rectangle>
+				<staticText>
+					<reportElement x="5" y="25" width="103" height="20" uuid="9be11b13-c3f9-450b-b15d-003c60471538"/>
+					<text><![CDATA[Total Promovidos B-E:]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="5" y="5" width="103" height="20" uuid="df0f2bd5-f2cd-4f99-beaf-1948b2cdaf5f"/>
+					<text><![CDATA[Total Promovidos A-B:]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="5" y="46" width="83" height="20" uuid="f1a5118d-d058-4896-8c6d-18343db17a30"/>
+					<text><![CDATA[Total Progredidos:]]></text>
+				</staticText>
+				<textField>
+					<reportElement x="108" y="5" width="70" height="20" uuid="1f71643e-6550-4a7c-b6aa-018d59c5fa8e"/>
+					<textElement textAlignment="Right"/>
+					<textFieldExpression><![CDATA[$P{dto}.getTotalPromovidosAB()]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement x="124" y="66" width="54" height="20" uuid="6b680290-682c-4604-92f3-50b36a81a83d"/>
+					<textElement textAlignment="Right"/>
+					<textFieldExpression><![CDATA[$P{dto}.getTotalReposicionamentos()]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement x="88" y="46" width="90" height="20" uuid="1bfd3b1a-e62d-4682-8f24-af7549e6c615"/>
+					<textElement textAlignment="Right"/>
+					<textFieldExpression><![CDATA[$P{dto}.getTotalProgredidos()]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement x="108" y="25" width="70" height="20" uuid="2bbdfafb-ecfa-4f3d-8ee2-db545c7490c0"/>
+					<textElement textAlignment="Right"/>
+					<textFieldExpression><![CDATA[$P{dto}.getTotalPromovidosBE()]]></textFieldExpression>
+				</textField>
+				<staticText>
+					<reportElement x="5" y="66" width="119" height="20" uuid="1e4b26ba-c2a0-4604-8b0c-29067ed34f9b"/>
+					<text><![CDATA[Total Reposicionamentos:]]></text>
+				</staticText>
+			</frame>
+		</band>
+	</lastPageFooter>
+	<noData>
+		<band height="35">
+			<staticText>
+				<reportElement x="1" y="0" width="801" height="35" forecolor="#FF0000" uuid="a8ae9e4c-cc95-4cda-a55c-47df67e9a461"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Nenhum registro encontrado.]]></text>
+			</staticText>
+		</band>
+	</noData>
+</jasperReport>

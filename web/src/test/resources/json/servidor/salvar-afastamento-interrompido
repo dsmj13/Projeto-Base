@@ -1,0 +1,15 @@
+	{
+		"afastamentoEntidade":
+		{
+			"id":14,
+			"descricao":"Lic. Incentivada Sem Remun. Prorrog - EST","codigo":"0078",
+			"ativo":"S",
+	},
+		"dataInicio":"2015-09-01",
+		"dataFim":"2015-09-30",
+		"erro":{
+		"dataInicio":false,
+		"dataFim":false
+	},
+		"idServidor":"AAAABBB"
+	}

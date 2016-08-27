@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="relatorioProgressao" pageWidth="842" pageHeight="595" orientation="Landscape" columnWidth="802" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="c20a349e-3db8-4f8e-8e40-e31b0cf04f2d">
+	<property name="ireport.zoom" value="1.1000000000000005"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<parameter name="logo" class="java.lang.String"/>
+	<parameter name="dataTitulo" class="java.lang.String"/>
+	<parameter name="dto" class="br.gov.anvisa.sgc.dtos.RelatorioProgressaoDTO" isForPrompting="false"/>
+	<parameter name="SUBREPORT_DIR" class="java.lang.String" isForPrompting="false">
+		<defaultValueExpression><![CDATA["C:\\Users\\v-ms_000\\Desenvolvimento\\workspace\\DWL\\rh\\web\\src\\main\\resources\\relatorios\\relatorioProgressao\\"]]></defaultValueExpression>
+	</parameter>
+	<group name="servidoresReposicionados">
+		<groupExpression><![CDATA[$V{PAGE_NUMBER}]]></groupExpression>
+		<groupHeader>
+			<band height="66" splitType="Stretch">
+				<printWhenExpression><![CDATA[$P{dto}.getReposicionados() == true]]></printWhenExpression>
+				<staticText>
+					<reportElement x="1" y="0" width="287" height="25" uuid="fa32d423-9bae-4c2d-8913-9d8574e5444f"/>
+					<textElement>
+						<font size="16" isBold="true"/>
+					</textElement>
+					<text><![CDATA[Servidores Reposicionados]]></text>
+				</staticText>
+				<subreport isUsingCache="false">
+					<reportElement x="2" y="25" width="799" height="41" uuid="e22fdda9-faf5-4568-8945-4d5bd8420571"/>
+					<subreportParameter name="dto">
+						<subreportParameterExpression><![CDATA[$P{dto}]]></subreportParameterExpression>
+					</subreportParameter>
+					<dataSourceExpression><![CDATA[new net.sf.jasperreports.engine.data.JRBeanCollectionDataSource($P{dto}.getServidoresReposicionados())]]></dataSourceExpression>
+					<subreportExpression><![CDATA["relatorioProgressaoReposicionados.jasper"]]></subreportExpression>
+				</subreport>
+			</band>
+		</groupHeader>
+	</group>
+	<group name="servidoresNaoReposicionados">
+		<groupExpression><![CDATA[$V{PAGE_NUMBER}]]></groupExpression>
+		<groupHeader>
+			<band height="62" splitType="Stretch">
+				<printWhenExpression><![CDATA[$P{dto}.getReposicionados() == false]]></printWhenExpression>
+				<staticText>
+					<reportElement x="1" y="0" width="323" height="22" uuid="f3c23f70-07ac-41f8-9629-dca852f86262"/>
+					<textElement>
+						<font size="16" isBold="true"/>
+					</textElement>
+					<text><![CDATA[Servidores Não Reposicionados]]></text>
+				</staticText>
+				<subreport>
+					<reportElement x="2" y="22" width="800" height="40" uuid="06f4fefd-fe40-4c1f-a083-67913ef4d14a"/>
+					<dataSourceExpression><![CDATA[new net.sf.jasperreports.engine.data.JRBeanCollectionDataSource($P{dto}.getServidoresNaoReposicionados())]]></dataSourceExpression>
+					<subreportExpression><![CDATA["relatorioProgressaoNaoReposicionados.jasper"]]></subreportExpression>
+				</subreport>
+			</band>
+		</groupHeader>
+	</group>
+	<title>
+		<band height="43" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="0" width="412" height="33" uuid="51113536-850e-42e1-a1f5-32ab5d6b0e58"/>
+				<textElement verticalAlignment="Middle">
+					<font size="18" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Relatório Mensal de Progressão e Promoção - ]]></text>
+			</staticText>
+			<image>
+				<reportElement x="658" y="0" width="143" height="33" uuid="e13b38f5-865b-46ef-bd30-6963baad22cd"/>
+				<imageExpression><![CDATA[$P{logo}]]></imageExpression>
+			</image>
+			<textField>
+				<reportElement x="383" y="0" width="209" height="33" uuid="5f9db86c-cbe0-43ad-b10c-660c02487fac"/>
+				<textElement verticalAlignment="Middle">
+					<font size="18" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{dataTitulo}]]></textFieldExpression>
+			</textField>
+		</band>
+	</title>
+	<pageFooter>
+		<band height="20" splitType="Stretch">
+			<textField>
+				<reportElement positionType="Float" x="681" y="0" width="80" height="20" uuid="fb465118-9563-4aae-906f-586cfa11e7c1"/>
+				<textElement textAlignment="Right"/>
+				<textFieldExpression><![CDATA["Página "+$V{PAGE_NUMBER}+" de"]]></textFieldExpression>
+			</textField>
+			<textField evaluationTime="Report">
+				<reportElement positionType="Float" x="761" y="0" width="40" height="20" uuid="e4eea0b5-fde6-41f2-aed2-994884a5542e"/>
+				<textFieldExpression><![CDATA[" " + $V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageFooter>
+</jasperReport>

@@ -1,0 +1,17 @@
+{  
+   "nome":"mario",
+   "cpf":"11111111111",
+   "dataNascimento":"2015-06-10",
+   "sexo":"M",
+   "rg":"23423424",
+   "orgaoExpedidorRg":"ssp",
+   "escolaridade":{
+   	"id":"1"
+   },
+   "telefones":[  
+      {  
+         "ddd":"17",
+         "telefone":"823741164"
+      }
+   ]
+}

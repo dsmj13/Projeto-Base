@@ -1,0 +1,22 @@
+	{
+		"numeroSiape":"15125124",
+		"dataEfetivoExercicio":"2015-08-01",
+		"situacaoFuncional":{"id":99,"descricao":"OUTROS","ativo":"S"},
+		"numeroPortariaNomeacao":"23213",
+		"dataPortariaNomeacao":"2015-08-01",
+		"dataDou":"2015-08-18",
+		"unidadeOrg":{"id":167,"nome":"ESTA��O ADUANEIRA INTERIOR DE UBERABA","sigla":"EADI-Multiterminais Uberaba-MG"},
+		"dataInicio":"2015-08-01",
+		"padrao":null,
+		"quadro":{"id":2,"nome":"Espec�fico","ativo":"S"},
+		"cargo":{"id":2,"nome":"MEDICO","ativo":"S"},
+		"nivelCargo":{"id":1,"nomeNivelCargo":"teste","ativo":"S"},
+		"desligado":"N",
+		"motivoDesligamento":null,
+		"dataDesligamento":null,
+		"idHistoricoLotacao":2550,
+		"descricaoObservacaoSemVinculo":null,
+		"descricaoSituacaoFuncionalOutros":"1231212512",
+		"erro":{"numeroSiape":false,"erro":false,"dataEfetivoExercicio":false,"situacaoFuncional":false,"unidadeOrg":false,"quadro":false,"cargo":false,"nivelCargo":false,"desligado":false,"descricaoSituacaoFuncionalOutros":false},
+		"idServidor":"11"
+	}
